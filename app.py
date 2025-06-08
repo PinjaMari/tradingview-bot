@@ -1,9 +1,10 @@
+@@ -0,0 +1,13 @@
 from flask import Flask, request
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
-def handle_webhook():
+def handle_webhook():Add commentMore actions
     data = request.json
     print("Received webhook:", data)
     # Process your webhook here (e.g., simulate trades)
