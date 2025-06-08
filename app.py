@@ -1,13 +1,13 @@
 from flask import Flask, request
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
 def handle_webhook():
     data = request.json
     print("Received webhook:", data)
-    # Process your webhook here (e.g., simulate trades)
+    # You can simulate trades here, calculate PnL, etc.
     return 'OK', 200
 
-if _name_ == '_main_':
-    app.run(port=5000)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=10000)
